@@ -1,4 +1,6 @@
-public class nix {
+package Administration;
+
+public class Main {
 
     public static void main(String[] args){
 
