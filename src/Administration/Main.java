@@ -1,6 +1,5 @@
 package Administration;
 
-import CG.Dice;
 
 public class Main {
 
@@ -8,6 +7,7 @@ public class Main {
 
         Dice dice = new Dice();
         int random = dice.roll();
-        System.out.println("Wuerfel: " + random);
+        System.out.println(random);
+
     }
 }

@@ -1,4 +1,4 @@
-package CG;
+package Administration;
 
 public class Dice {
 
@@ -8,7 +8,7 @@ public class Dice {
 
     public int roll(){
         int random;
-        random = (int) Math.random()*6;
+        random = (int) Math.ceil(Math.random()*6);
         return random;
     }
 }
