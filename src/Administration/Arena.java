@@ -6,16 +6,35 @@ public class Arena {
     Figure[] finishBoxP1;
     Figure[] startBoxP2;
     Figure[] finishBoxP2;
+    Figure[][] searchBox;
 
     public Arena(){
         arenaArray = new Figure[20];
-        startBoxP1 = new Figure[3];
+        startBoxP1 = new Figure[]{ new Figure(1, 1), new Figure(1, 2), new Figure(1, 3) };
         finishBoxP1 = new Figure[3];
-        startBoxP2 = new Figure[3];
+        startBoxP2 = new Figure[]{ new Figure(2, 4), new Figure(2, 5), new Figure(2, 6) };
         finishBoxP2 = new Figure[3];
+        searchBox = new Figure[][] {arenaArray, startBoxP1, finishBoxP1, startBoxP1, finishBoxP2};
     }
 
+
+
     //GETTER AND SETTER:
+
+    public int getFigurePosition(int figureID){
+        int figurePosition;
+        int id = -1;
+        for(int i = 0; i == searchBox.length; i++){
+            for(int j=0; j == searchBox[i].length; j++){
+                id = searchBox[i][j].getId();
+                    if(id == figureID){
+                        break;
+                    }
+
+            }
+        }
+        return id;
+    }
 
     public Figure[] getArenaArray() {
         return arenaArray;
@@ -37,23 +56,4 @@ public class Arena {
         return finishBoxP2;
     }
 
-    public void setArenaArray(Figure[] arenaArray) {
-        this.arenaArray = arenaArray;
-    }
-
-    public void setStartBoxP1(Figure[] startBoxP1) {
-        this.startBoxP1 = startBoxP1;
-    }
-
-    public void setFinishBoxP1(Figure[] finishBoxP1) {
-        this.finishBoxP1 = finishBoxP1;
-    }
-
-    public void setStartBoxP2(Figure[] startBoxP2) {
-        this.startBoxP2 = startBoxP2;
-    }
-
-    public void setFinishBoxP2(Figure[] finishBoxP2) {
-        this.finishBoxP2 = finishBoxP2;
-    }
 }

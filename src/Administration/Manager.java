@@ -15,6 +15,10 @@ public class Manager {
         dice = new Dice();
     }
 
+    private void moveFigure(int figureID){
+        arena.get
+    }
+
     //GETTER AND SETTER:
     public Player getP1() {
         return p1;
