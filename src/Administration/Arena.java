@@ -9,7 +9,7 @@ public class Arena {
     final Boolean playeroneturn;
 
     public Arena(){
-        arenaArray = new int[20];
+        arenaArray = new int[16];
         finishBoxP1 = 0;
         finishBoxP2 = 0;
         startBoxP1 = 3;
@@ -35,6 +35,23 @@ public class Arena {
         this.playeroneturn = null;
     }
 
+    public Arena(Arena arena, boolean playeroneturn){
+        this.arenaArray = arena.arenaArray;
+        this.playeroneturn = playeroneturn;
+        this.finishBoxP1 = arena.finishBoxP1;
+        this.finishBoxP2 = arena.finishBoxP2;
+        this.startBoxP1 = arena.startBoxP1;
+        this.startBoxP2 = arena.startBoxP2;
+    }
+
+    //Tests
+    public Arena move(int from, int to){
+        if(arenaArray[from] == 0){
+            throw new RuntimeException("invalid move");
+        }
+        return null;
+
+    }
 
     //GETTER AND SETTER:
 
